@@ -1,5 +1,4 @@
 // Un Componente es una funcion de Js
-import { useState } from "react";
 import Header from "./components/Header";
 import Guitar from "./components/Guitar";
 import { useCart } from "./hooks/useCart";
@@ -23,16 +22,16 @@ function App() {
   // No se deben colocar dentro de condicionales, ni despues de return (Porque marca error cuando se actualiza automaticamente)
 
 
- const {data,cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity, cleanCart, isEmpty, cartTotal } = useCart()
+  const { data, cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity, cleanCart, isEmpty, cartTotal } = useCart()
 
- 
+
   // Antes del return solo podemos escribir Sentencias
   // Statements: Instrucción completa que realiza una acción en un programa. (Variables, if, bucle)
   return (
     // Dentro del return solo podemos escribir Expresiones 
     // Expressions: Fragmento de código que produce un valor. (sumas, metodos que retornan algo nuevo, )
     <>
-    {/* Props en el Header */}
+      {/* Props en el Header */}
       <Header
         cart={cart}
         removeFromCart={removeFromCart}

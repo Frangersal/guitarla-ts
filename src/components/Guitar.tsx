@@ -1,15 +1,11 @@
-type Guitar = {
-  id: number
-  name: string
-  image: string
-  description: string
-  price: number
+import type {Guitar} from '../types/index'
 
+type GuitarProps = { 
+  guitar: Guitar, 
+  addToCart: (item: Guitar) => void 
 }
 
-export default function Guitar({ guitar, addToCart }: {
-  guitar: Guitar, addToCart: (item: Guitar) => void
-}) {
+export default function Guitar({ guitar, addToCart } : GuitarProps) {
   // props {guitar}
   // console.log(guitar);
 
